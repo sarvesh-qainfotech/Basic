@@ -138,17 +138,7 @@ class startAutomation {
 		element.click();
 	}
 
-}
-
-public class AutomatedTATOC {
-
-	public static void main(String args[]) throws InterruptedException {
-
-		/*
-		 * WebDriverWait D = new WebDriverWait(driver, 10); element =
-		 * D.until(ExpectedConditions
-		 * .presenceOfElementLocated(By.id("answer")));
-		 */
+	public void automateFifthLevel() {
 
 		// finding the element "generate  token" by its name
 		element = driver.findElement(By.linkText("Generate Token"));
@@ -159,7 +149,7 @@ public class AutomatedTATOC {
 		// finding the element "token" by its id;
 		element = driver.findElement(By.id("token"));
 
-		// getting the actualy cookie string by removing unwanted text
+		// getting the actual cookie string by removing unwanted text
 		String tokenValue = element.getText().substring(7);
 
 		// create a cookie for this page as per as instructions
@@ -174,6 +164,23 @@ public class AutomatedTATOC {
 		// click on the "proceed" link
 		element.click();
 
+	}
+
+	public void closeBrowser() {
 		driver.quit();
+	}
+
+}
+
+public class AutomatedTATOC {
+
+	public static void main(String args[]) throws InterruptedException {
+
+		/*
+		 * WebDriverWait D = new WebDriverWait(driver, 10); element =
+		 * D.until(ExpectedConditions
+		 * .presenceOfElementLocated(By.id("answer")));
+		 */
+
 	}
 }
