@@ -176,11 +176,26 @@ public class AutomatedTATOC {
 
 	public static void main(String args[]) throws InterruptedException {
 
-		/*
-		 * WebDriverWait D = new WebDriverWait(driver, 10); element =
-		 * D.until(ExpectedConditions
-		 * .presenceOfElementLocated(By.id("answer")));
-		 */
+		// create a constructor of startAutomation class
+		startAutomation automation = new startAutomation();
+
+		// automate fisrt level
+		automation.automateFirstLevel();
+
+		// automate second level
+		automation.automateSecondLevel();
+
+		// automate third level
+		automation.automateThirdLevel();
+
+		// automate fourth level
+		automation.automateFourthLevel();
+
+		// automate fifth level
+		automation.automateFifthLevel();
+
+		// close browser
+		automation.closeBrowser();
 
 	}
 }
