@@ -5,36 +5,38 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AutomatedTATOC {
+class startAutomation {
 
-	public static void main(String args[]) throws InterruptedException {
+	WebDriver driver;
+	WebElement element;
 
+	// Default Constructor which trigger the firefox with the source URL
+	startAutomation() {
 		// create a new instance of firefox browser
-		WebDriver driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 
 		// opens the following in browser
 		driver.get("http://172.16.1.17/tatoc");
+	}
 
+	public void automateFirstLevel() {
 		// finding the link element by its name
-		WebElement element = driver.findElement(By.linkText("Basic Course"));
+		element = driver.findElement(By.linkText("Basic Course"));
 
 		// click on the "Basic Course" link
 		element.click();
 
-		// finding the element by its class name
+		// finding the element of 1st level by its class name
 		element = driver.findElement(By.className("greenbox"));
 
 		// click on the green box link
 		element.click();
 
-		// switch  frame
-		driver.switchTo().frame("main");
+	}
 
-		/*
-		 * WebDriverWait D = new WebDriverWait(driver, 10); element =
-		 * D.until(ExpectedConditions
-		 * .presenceOfElementLocated(By.id("answer")));
-		 */
+	public void automateSecondLevel() {
+		// switch frame
+		driver.switchTo().frame("main");
 
 		// finding the element by its ID(BOX 1)
 		element = driver.findElement(By.id("answer"));
@@ -72,7 +74,6 @@ public class AutomatedTATOC {
 				// click on the Proceed link
 				element = driver.findElement(By.linkText("Proceed"));
 				element.click();
-
 				whileLoopVariable = false;
 			} else {
 
@@ -84,6 +85,10 @@ public class AutomatedTATOC {
 
 		}
 
+	}
+
+	public void automateThirdLevel() {
+
 		// draging the box into the rectangle by using javascript executer
 		JavascriptExecutor js = (JavascriptExecutor) (driver);
 		js.executeScript("document.getElementById('div1').innerHTML="
@@ -94,7 +99,9 @@ public class AutomatedTATOC {
 
 		// click on Proceed link
 		element.click();
+	}
 
+	public void automateFourthLevel() {
 		// findind the element "Launch Popup Window" by link text
 		element = driver.findElement(By.linkText("Launch Popup Window"));
 
@@ -102,7 +109,7 @@ public class AutomatedTATOC {
 		element.click();
 
 		// getting the windowHandler of parent window
-		String winHandleBefore = driver.getWindowHandle();
+		String winHandlerParent = driver.getWindowHandle();
 
 		// switching from parent window to child window
 		for (String winHandle : driver.getWindowHandles()) {
@@ -122,13 +129,26 @@ public class AutomatedTATOC {
 		element.click();
 
 		// switching controls from child to parent window through windowHandler
-		driver.switchTo().window(winHandleBefore);
+		driver.switchTo().window(winHandlerParent);
 
 		// finding the "proceed" link by its id
 		element = driver.findElement(By.linkText("Proceed"));
 
 		// click on "proceed" link
 		element.click();
+	}
+
+}
+
+public class AutomatedTATOC {
+
+	public static void main(String args[]) throws InterruptedException {
+
+		/*
+		 * WebDriverWait D = new WebDriverWait(driver, 10); element =
+		 * D.until(ExpectedConditions
+		 * .presenceOfElementLocated(By.id("answer")));
+		 */
 
 		// finding the element "generate  token" by its name
 		element = driver.findElement(By.linkText("Generate Token"));
