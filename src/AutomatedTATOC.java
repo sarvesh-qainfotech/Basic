@@ -12,7 +12,7 @@ public class AutomatedTATOC {
 		// create a new instance of firefox browser
 		WebDriver driver = new FirefoxDriver();
 
-		// opens the following web address in browser
+		// opens the following in browser
 		driver.get("http://172.16.1.17/tatoc");
 
 		// finding the link element by its name
