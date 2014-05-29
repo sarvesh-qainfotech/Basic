@@ -27,7 +27,7 @@ public class AutomatedTATOC {
 		// click on the green box link
 		element.click();
 
-		// switch the frame
+		// switch  frame
 		driver.switchTo().frame("main");
 
 		/*
