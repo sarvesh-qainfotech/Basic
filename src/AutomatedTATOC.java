@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,6 +32,10 @@ class startAutomation {
 
 		// click on the green box link
 		element.click();
+
+		// check the title of 2nd level to ensuring switching on 2nd level
+		Assert.assertEquals("Check level 2 title",
+				"Frame Dungeon - Basic Course - T.A.T.O.C", driver.getTitle());
 
 	}
 
@@ -85,6 +90,10 @@ class startAutomation {
 
 		}
 
+		// check the title of 3rd level to ensuring switching on 3rd level
+		Assert.assertEquals("Check level 3 title",
+				"Drag - Basic Course - T.A.T.O.C", driver.getTitle());
+
 	}
 
 	public void automateThirdLevel() {
@@ -99,6 +108,11 @@ class startAutomation {
 
 		// click on Proceed link
 		element.click();
+
+		// // check the title of 4th level to ensuring switching on 4th level
+		Assert.assertEquals("Check level 4 title",
+				"Windows - Basic Course - T.A.T.O.C", driver.getTitle());
+
 	}
 
 	public void automateFourthLevel() {
@@ -136,6 +150,11 @@ class startAutomation {
 
 		// click on "proceed" link
 		element.click();
+
+		// check the title of 5th level to ensuring switching on 5th level
+		Assert.assertEquals("Check level 5 title",
+				"Cookie Handling - Basic Course - T.A.T.O.C", driver.getTitle());
+
 	}
 
 	public void automateFifthLevel() {
@@ -163,6 +182,10 @@ class startAutomation {
 
 		// click on the "proceed" link
 		element.click();
+
+		// // checking the course completion page
+		Assert.assertEquals("Check course completion page", "End - T.A.T.O.C",
+				driver.getTitle());
 
 	}
 
