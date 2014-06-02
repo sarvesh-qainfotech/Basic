@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="1607" started-at="2014-06-02T12:48:25Z" finished-at="2014-06-02T12:48:27Z">
+    <groups>
+    </groups>
+    <test name="test1" duration-ms="1607" started-at="2014-06-02T12:48:25Z" finished-at="2014-06-02T12:48:27Z">
+      <class name="com.qainfotech.runtest.AutomatedTatocTestngRun">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@2eced8c6]" name="beforeClass" is-config="true" duration-ms="4298" started-at="2014-06-02T18:18:21Z" finished-at="2014-06-02T18:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="tetscase1()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@2eced8c6]" name="tetscase1" duration-ms="1593" started-at="2014-06-02T18:18:25Z" finished-at="2014-06-02T18:18:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tetscase1 -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@2eced8c6]" name="afterClass" is-config="true" duration-ms="7" started-at="2014-06-02T18:18:27Z" finished-at="2014-06-02T18:18:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.qainfotech.runtest.AutomatedTatocTestngRun -->
+    </test> <!-- test1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>

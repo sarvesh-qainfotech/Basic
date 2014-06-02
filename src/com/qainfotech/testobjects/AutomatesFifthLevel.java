@@ -4,10 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 
 public class AutomatesFifthLevel {
-	
+	@Test
 	public void automatingFifthLevel(WebDriver driver){
 		WebElement generateTokenLink = driver.findElement(By
 				.linkText("Generate Token"));

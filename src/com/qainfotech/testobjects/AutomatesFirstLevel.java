@@ -1,12 +1,19 @@
 package com.qainfotech.testobjects;
 
 import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AutomatesFirstLevel {
 
+
+
+public class AutomatesFirstLevel {
+	
+	
+
+	
 	public void automatingFirstLevel(WebDriver driver) {
 
 		WebElement basicCourse = driver
