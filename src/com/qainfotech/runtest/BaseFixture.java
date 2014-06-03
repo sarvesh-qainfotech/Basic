@@ -40,7 +40,6 @@ public class BaseFixture {
 	}
 
 	public void closer() {
-		browser.closeBrowser();
-	}
+		driver.close();	}
 
 }

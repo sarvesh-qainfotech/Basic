@@ -1,9 +1,11 @@
 package com.qainfotech.testobjects;
 
-import org.junit.Assert;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 
 public class AutomatesFourthLevel {
@@ -45,8 +47,8 @@ public class AutomatesFourthLevel {
 		proceedLink.click();
 
 		// check the title of 5th level to ensuring switching on 5th level
-		Assert.assertEquals("Check level 5 title",
-				"Cookie Handling - Basic Course - T.A.T.O.C", driver.getTitle());
+		Assert.assertEquals(driver.getTitle(),
+				"Cookie Handling - Basic Course - T.A.T.O.C","Check level 5 title");
 	}
 
 }

@@ -1,11 +1,9 @@
 package com.qainfotech.testobjects;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 
 public class AutomatesSecondLevel {
 
@@ -25,11 +23,8 @@ public class AutomatesSecondLevel {
 
 		String box1Color = box1.getAttribute("class");
 
-		// initializing while loop variable by true
-		boolean whileLoopVariable = true;
-
 		// It will runs untill the color of both boxes are not matched
-		while (whileLoopVariable) {
+		while (true) {
 
 			WebElement repaintBox2Link = driver.findElement(By
 					.linkText("Repaint Box 2"));
@@ -52,7 +47,9 @@ public class AutomatesSecondLevel {
 				WebElement proceedLink = driver.findElement(By
 						.linkText("Proceed"));
 				proceedLink.click();
-				whileLoopVariable = false;
+
+				break;
+
 			} else {
 
 				// switch the frame
@@ -62,10 +59,11 @@ public class AutomatesSecondLevel {
 			}
 
 		}
-
+		// System.out.println("Title is : "+driver.getTitle());
 		// check the title of 3rd level to ensuring switching on 3rd level
-		Assert.assertEquals("Check level 3 title",
-				"Drag - Basic Course - T.A.T.O.C", driver.getTitle());
+
+		Assert.assertEquals(driver.getTitle(),
+				"Drag - Basic Course - T.A.T.O.C", "Incorrect Title");
 
 	}
 

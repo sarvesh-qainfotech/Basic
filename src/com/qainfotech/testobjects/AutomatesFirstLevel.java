@@ -1,14 +1,14 @@
 package com.qainfotech.testobjects;
 
-import org.junit.Assert;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class AutomatesFirstLevel {
 
 	WebDriver driver;
+
 	public AutomatesFirstLevel(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -25,8 +25,9 @@ public class AutomatesFirstLevel {
 		greenBox.click();
 
 		// check the title of 2nd level to ensuring switching on 2nd level
-		Assert.assertEquals("Check level 2 title",
-				"Frame Dungeon - Basic Course - T.A.T.O.C", driver.getTitle());
+		Assert.assertEquals(driver.getTitle(),
+				"Frame Dungeon - Basic Course - T.A.T.O.C",
+				"Check level 2 title");
 
 	}
 

@@ -1,22 +1,21 @@
 package com.qainfotech.testobjects;
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-
+import org.testng.Assert;
 
 public class AutomatesFifthLevel {
-	
+
 	WebDriver driver;
 
 	public AutomatesFifthLevel(WebDriver driver) {
 		this.driver = driver;
 
 	}
-	
-	public void automatingFifthLevel(){
+
+	public void automatingFifthLevel() {
 		WebElement generateTokenLink = driver.findElement(By
 				.linkText("Generate Token"));
 
@@ -36,12 +35,9 @@ public class AutomatesFifthLevel {
 		proceedLink.click();
 
 		// checking the course completion page
-		Assert.assertEquals("Check course completion page", "End - T.A.T.O.C",
-				driver.getTitle());
+		Assert.assertEquals(driver.getTitle(), "End - T.A.T.O.C",
+				"Check course completion page");
 
 	}
-	
-	
-	
 
 }
