@@ -1,14 +1,21 @@
 package com.qainfotech.testobjects;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 
 public class AutomatesFourthLevel {
-	@Test
-	public void automatingFourthLevel(WebDriver driver){
+
+	WebDriver driver;
+
+	public AutomatesFourthLevel(WebDriver driver) {
+		this.driver = driver;
+
+	}
+
+	public void automatingFourthLevel() {
 		WebElement launchPopupWindow = driver.findElement(By
 				.linkText("Launch Popup Window"));
 

@@ -1,21 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="9016" started-at="2014-06-03T04:17:15Z" finished-at="2014-06-03T04:17:24Z">
+  <suite name="Suite1" duration-ms="5072" started-at="2014-06-03T06:41:47Z" finished-at="2014-06-03T06:41:52Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="9016" started-at="2014-06-03T04:17:15Z" finished-at="2014-06-03T04:17:24Z">
+    <test name="test1" duration-ms="5072" started-at="2014-06-03T06:41:47Z" finished-at="2014-06-03T06:41:52Z">
       <class name="com.qainfotech.runtest.AutomatedTatocTestngRun">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@72fccde]" name="beforeClass" is-config="true" duration-ms="6608" started-at="2014-06-03T09:47:15Z" finished-at="2014-06-03T09:47:22Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@6a5c3cfe]" name="beforeClass" is-config="true" duration-ms="4087" started-at="2014-06-03T12:11:47Z" finished-at="2014-06-03T12:11:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="tetscase1()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@72fccde]" name="tetscase1" duration-ms="2388" started-at="2014-06-03T09:47:22Z" finished-at="2014-06-03T09:47:24Z">
+        <test-method status="FAIL" signature="tetscase1()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@6a5c3cfe]" name="tetscase1" duration-ms="966" started-at="2014-06-03T12:11:51Z" finished-at="2014-06-03T12:11:52Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Drag - Basic Course - T.A.T.O.C expected [Drag - Basic Course - T.A.T.O.C] but found [Check level 3 title]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Drag - Basic Course - T.A.T.O.C expected [Drag - Basic Course - T.A.T.O.C] but found [Check level 3 title]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.qainfotech.testobjects.AutomatesSecondLevel.automatingSecondLevel(AutomatesSecondLevel.java:67)
+	at com.qainfotech.runtest.BaseFixture.runTestCases(BaseFixture.java:35)
+	at com.qainfotech.runtest.AutomatedTatocTestngRun.tetscase1(AutomatedTatocTestngRun.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tetscase1 -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@72fccde]" name="afterClass" is-config="true" duration-ms="7" started-at="2014-06-03T09:47:24Z" finished-at="2014-06-03T09:47:24Z">
+        <test-method status="FAIL" signature="afterClass()[pri:0, instance:com.qainfotech.runtest.AutomatedTatocTestngRun@6a5c3cfe]" name="afterClass" is-config="true" duration-ms="0" started-at="2014-06-03T12:11:52Z" finished-at="2014-06-03T12:11:52Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.qainfotech.testobjects.Browser.closeBrowser(Browser.java:22)
+	at com.qainfotech.runtest.BaseFixture.closer(BaseFixture.java:43)
+	at com.qainfotech.runtest.AutomatedTatocTestngRun.afterClass(AutomatedTatocTestngRun.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

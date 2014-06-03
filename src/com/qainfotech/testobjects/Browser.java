@@ -5,17 +5,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Browser {
 
-	
-	public WebDriver driver;
+	WebDriver driver;
 
-	public void openBrowser() {
+	public WebDriver openBrowser() {
 
-		driver = new FirefoxDriver();
+		return new FirefoxDriver();
 	}
 
-	public void setUrl(String url) {
-		
-		driver.get(url);
+	public String setUrl(String url) {
+
+		return url;
 
 	}
 

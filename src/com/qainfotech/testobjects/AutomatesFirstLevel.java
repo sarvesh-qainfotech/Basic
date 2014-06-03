@@ -6,15 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-
-
-
 public class AutomatesFirstLevel {
-	
-	
 
-	
-	public void automatingFirstLevel(WebDriver driver) {
+	WebDriver driver;
+	public AutomatesFirstLevel(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public void automatingFirstLevel() {
 
 		WebElement basicCourse = driver
 				.findElement(By.linkText("Basic Course"));

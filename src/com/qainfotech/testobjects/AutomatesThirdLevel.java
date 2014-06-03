@@ -1,28 +1,34 @@
 package com.qainfotech.testobjects;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 
 public class AutomatesThirdLevel {
-	@Test
-	public void automatingThirdLevel(WebDriver driver)
-	{
+
+	WebDriver driver;
+
+	public AutomatesThirdLevel(WebDriver driver) {
+		this.driver = driver;
+
+	}
+
+	public void automatingThirdLevel() {
 		// draging the box into the rectangle by using javascript executer
-				JavascriptExecutor js = (JavascriptExecutor) (driver);
-				js.executeScript("document.getElementById('div1').innerHTML="
-						+ "document.getElementById('drag1').outerHTML");
+		JavascriptExecutor js = (JavascriptExecutor) (driver);
+		js.executeScript("document.getElementById('div1').innerHTML="
+				+ "document.getElementById('drag1').outerHTML");
 
-				WebElement proceedLink = driver.findElement(By.linkText("Proceed"));
+		WebElement proceedLink = driver.findElement(By.linkText("Proceed"));
 
-				proceedLink.click();
+		proceedLink.click();
 
-				// check the title of 4th level to ensuring switching on 4th level
-				Assert.assertEquals("Check level 4 title",
-						"Windows - Basic Course - T.A.T.O.C", driver.getTitle());
+		// check the title of 4th level to ensuring switching on 4th level
+		Assert.assertEquals("Check level 4 title",
+				"Windows - Basic Course - T.A.T.O.C", driver.getTitle());
 	}
 
 }
