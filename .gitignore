@@ -1,5 +1,4 @@
 *.class
-
-test-output/
+test-output/*
 
 
