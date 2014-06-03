@@ -11,6 +11,10 @@ import org.testng.Assert;
 public class AutomatesFourthLevel {
 
 	WebDriver driver;
+	WebElement launchPopupWindow;
+	WebElement popupTextBox;
+	WebElement submitLink;
+	WebElement proceedLink;
 
 	public AutomatesFourthLevel(WebDriver driver) {
 		this.driver = driver;
@@ -18,7 +22,7 @@ public class AutomatesFourthLevel {
 	}
 
 	public void automatingFourthLevel() {
-		WebElement launchPopupWindow = driver.findElement(By
+		launchPopupWindow = driver.findElement(By
 				.linkText("Launch Popup Window"));
 
 		launchPopupWindow.click();
@@ -31,18 +35,18 @@ public class AutomatesFourthLevel {
 			driver.switchTo().window(winHandle);
 		}
 
-		WebElement popupTextBox = driver.findElement(By.id("name"));
+		 popupTextBox = driver.findElement(By.id("name"));
 
 		popupTextBox.sendKeys("sarvesh");
 
-		WebElement submitLink = driver.findElement(By.id("submit"));
+		 submitLink = driver.findElement(By.id("submit"));
 
 		submitLink.click();
 
 		// switching controls from child to parent window through windowHandler
 		driver.switchTo().window(winHandlerParent);
 
-		WebElement proceedLink = driver.findElement(By.linkText("Proceed"));
+		proceedLink = driver.findElement(By.linkText("Proceed"));
 
 		proceedLink.click();
 

@@ -8,6 +8,10 @@ import org.testng.Assert;
 public class AutomatesSecondLevel {
 
 	WebDriver driver;
+	WebElement box1;
+	WebElement repaintBox2Link;
+	WebElement box2;
+	WebElement proceedLink;
 
 	public AutomatesSecondLevel(WebDriver driver) {
 		this.driver = driver;
@@ -19,14 +23,14 @@ public class AutomatesSecondLevel {
 		// switch frame
 		driver.switchTo().frame("main");
 
-		WebElement box1 = driver.findElement(By.id("answer"));
+		 box1 = driver.findElement(By.id("answer"));
 
 		String box1Color = box1.getAttribute("class");
 
 		// It will runs untill the color of both boxes are not matched
 		while (true) {
 
-			WebElement repaintBox2Link = driver.findElement(By
+			 repaintBox2Link = driver.findElement(By
 					.linkText("Repaint Box 2"));
 
 			repaintBox2Link.click();
@@ -34,7 +38,7 @@ public class AutomatesSecondLevel {
 			// swich the child frame of BOX 2
 			driver.switchTo().frame("child");
 
-			WebElement box2 = driver.findElement(By.id("answer"));
+			 box2 = driver.findElement(By.id("answer"));
 
 			String box2Color = box2.getAttribute("class");
 
@@ -44,7 +48,7 @@ public class AutomatesSecondLevel {
 				driver.switchTo().defaultContent();
 				driver.switchTo().frame("main");
 
-				WebElement proceedLink = driver.findElement(By
+			    proceedLink = driver.findElement(By
 						.linkText("Proceed"));
 				proceedLink.click();
 

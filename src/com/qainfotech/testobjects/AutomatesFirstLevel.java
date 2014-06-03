@@ -8,6 +8,8 @@ import org.testng.Assert;
 public class AutomatesFirstLevel {
 
 	WebDriver driver;
+	WebElement basicCourse;
+	WebElement greenBox;
 
 	public AutomatesFirstLevel(WebDriver driver) {
 		this.driver = driver;
@@ -15,12 +17,12 @@ public class AutomatesFirstLevel {
 
 	public void automatingFirstLevel() {
 
-		WebElement basicCourse = driver
+		 basicCourse = driver
 				.findElement(By.linkText("Basic Course"));
 
 		basicCourse.click();
 
-		WebElement greenBox = driver.findElement(By.className("greenbox"));
+		greenBox = driver.findElement(By.className("greenbox"));
 
 		greenBox.click();
 

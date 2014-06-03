@@ -11,6 +11,7 @@ import org.testng.Assert;
 public class AutomatesThirdLevel {
 
 	WebDriver driver;
+	WebElement proceedLink;
 
 	public AutomatesThirdLevel(WebDriver driver) {
 		this.driver = driver;
@@ -24,7 +25,7 @@ public class AutomatesThirdLevel {
 		js.executeScript("document.getElementById('div1').innerHTML="
 				+ "document.getElementById('drag1').outerHTML");
 
-		WebElement proceedLink = driver.findElement(By.linkText("Proceed"));
+		 proceedLink = driver.findElement(By.linkText("Proceed"));
 
 		proceedLink.click();
 
