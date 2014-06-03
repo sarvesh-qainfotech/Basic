@@ -21,8 +21,9 @@ public class BaseFixture {
 
 	public void initializer() {
 		driver = browser.openBrowser();
-		String str = browser.setUrl("http://172.16.1.17/tatoc"); 
-		driver.get(str);
+
+		driver.get("http://172.16.1.17/tatoc");
+
 		level1 = new AutomatesFirstLevel(driver);
 		level2 = new AutomatesSecondLevel(driver);
 		level3 = new AutomatesThirdLevel(driver);
